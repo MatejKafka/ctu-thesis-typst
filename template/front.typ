@@ -22,7 +22,7 @@
 
   set align(center)
   set place(center)
-  set text(font: "Technika", weight: "extralight", size: 10.3pt)
+  set text(font: "Technika", weight: "extralight", size: 10.3pt, fallback: false)
 
   // shorthand to vertically position elements
   let b(dy, content, size: none, weight: none) = {

@@ -15,7 +15,7 @@
     title: meta.title, date:
     meta.submission-date
   )
-  set text(font: "Linux Libertine", size: 11pt, lang: "en")
+  set text(font: "Linux Libertine", size: 11pt, lang: "en", fallback: false)
 
   // the idea behind the inner margin is that if you lay the book out flat, there should be the same amount of space in the middle as on the outside
   // however, with binding from Haron.cz, the sides do not lay flat; from discussion with the guy at Haron, 8mm is consumed by the binding, and quite a lot of extra space is lost, since the page does not lay flat due to the binding; when I measured it in my printed thesis, I think the inner margin should be roughly 34mm and the outer margin 36mm at the beginning and end (where one side lays flat), and a bit more than that in the middle, but the variance based on how much you press down on the page is quite high, so we can make our lives easier and go with a symmetric 35mm+35mm margin
