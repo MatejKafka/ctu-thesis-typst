@@ -15,3 +15,5 @@ If you don't, the title page will be mostly blank, except for the CTU logo.
 ## Example
 
 To view the output of the template, see [example.pdf](./example.pdf), which is compiled from `example.typ` using Typst v0.11.1.
+
+For a more complex example, see my thesis, which uses this template: https://typst.app/project/rlLOElGGPtW50kb2HFsT1-

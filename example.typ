@@ -44,7 +44,7 @@
 
 = Introduction
 
-#lorem(80)
+#lorem(80) @template
 
 #lorem(120)
 
