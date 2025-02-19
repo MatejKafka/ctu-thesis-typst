@@ -59,22 +59,15 @@
     v(8pt)
   }
 
-  import "@preview/outrageous:0.1.0"
-  set outline(indent: true)
-  show outline.entry: outrageous.show-entry.with(
-    font: (none, none),
-    // very hacky way to format appendices differently
-    // there's gotta be a better way, but I don't see it
-    body-transform: (lvl, body) => {
-      if "children" in body.fields() {
-        let (num, ..text) = body.children
-        if regex("^[A-Z]$") in num.text {
-          return "Appendix " + num + ": " + text.join()
-        }
-      }
-      body
-    }
-  )
+  set outline(indent: 1em)
+  //make the first levels bold (sections) and Treat the ppendix notion in pure Typst
+  show outline.entry.where(level: 1): it => text(link(
+    it.element.location(),
+    it.indented(if it.prefix() != none and regex("^[A-Z]$") in it.prefix().text {
+        "Appendix" + " " + it.prefix() + ":"
+      } else {
+        it.prefix()
+      }, it.inner())), weight: "bold")
 
   set heading(numbering: "1.1")
   show heading.where(level: 1): it => {
